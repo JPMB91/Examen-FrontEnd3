@@ -1,14 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
+import Contact from "./Routes/Contact";
+import Favs from "./Routes/Favs";
+import Home from "./Routes/Home";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Detail from "./Routes/Detail";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-      <App/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/favs" element={<Favs />} />
+          <Route path="/dentista:id" element={<Detail/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
-
-
