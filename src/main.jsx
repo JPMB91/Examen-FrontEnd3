@@ -17,7 +17,8 @@ root.render(
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/favs" element={<Favs />} />
-          <Route path="/dentista:id" element={<Detail/>}/>
+          <Route path="/dentist/:id" element={<Detail/>}/>
+          
         </Route>
       </Routes>
     </BrowserRouter>

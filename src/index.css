@@ -80,6 +80,9 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  img{
+    width: 140px;
+  }
 }
 
 .card:hover{
