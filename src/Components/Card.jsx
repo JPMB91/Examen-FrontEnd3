@@ -28,10 +28,12 @@ const Card = ({ name, username, id }) => {
     }
   };
 
+  //TODO classname para link: className={state.theme === "light" ? "light" : "dark"}
   return (
     <div className="card">
       <img src="../images/doctor.jpg" alt="doctor" />
-      <Link to={`/dentist/${id}`}>
+      
+      <Link  to={`/dentist/${id}`}>
         <h3>{name}</h3>
       </Link>
       <h3>{username}</h3>

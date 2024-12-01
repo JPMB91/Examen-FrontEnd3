@@ -1,33 +1,58 @@
 import { useState } from "react";
 
 const Form = () => {
-  const [data, setData] = useState({ nombre: "", email: "" });
+  const [data, setData] = useState({ name: "", email: "" });
+  const [error, setError] = useState({ name: "", email: "" });
+  const [message, setMessage] = useState("");
   //Aqui deberan implementar el form completo con sus validaciones
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const emailFormat = /^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/gm;
+
+    const errorsFound = { name: "", email: "" };
+
+    if (!emailFormat.test(data.email)) {
+      errorsFound.email = "Use a valid email format";
+    }
+    if (data.name.length < 5) {
+      errorsFound.name = "Name must be al least 5 characters long";
+    } else {
+      setError({ name: "", email: "" });
+      setData({ name: "", email: "" });
+      setMessage("Thank you for contacting us, we will be in touch soon");
+    }
+
+    setError(errorsFound);
+  };
+
   const handleChange = (e) => {
-    setData(e.target.value);
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
   };
   return (
     <div>
       <form>
-        <label htmlFor="name">Nombre</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           name="name"
-          value={data.nombre}
+          value={data.name}
           onChange={handleChange}
         />
+        {error.name && <h5 className="error">{error.name}</h5>}
         <label htmlFor="email">Email</label>
         <input
-          type="email"
+          type="text"
           name="email"
           value={data.email}
           onChange={handleChange}
         />
-        <label htmlFor="mensaje">Mensaje</label>
-        {/* <input type="text" name="mensage" id="mensaje" /> */}
-        <textarea name="mensaje" id="mensaje"></textarea>
-        <button>Enviar</button>
+        {error.email && <h5 className="error">{error.email}</h5>}
+        {/* <label htmlFor="message">Message</label>
+        <textarea name="message" id="message"></textarea> */}
+        <button onClick={handleSubmit}>Send</button>
+        {message && <h5 className="success">{message}</h5>}
       </form>
     </div>
   );

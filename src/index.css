@@ -1,4 +1,3 @@
-
 body {
   /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,13 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.favButton{
+  /* code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  } */
+
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
@@ -20,55 +21,64 @@ code {
   cursor: pointer;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-nav{
+nav {
   display: flex;
   width: auto;
   justify-content: flex-end;
   padding: 1rem;
 }
 
-a{
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
 footer {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.2rem;
   /* bottom: 0; */
   width: 90%;
   height: 40px;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
-footer > img{
+footer>img {
   width: 200px;
-  
+
 }
 
-form{
-  padding: 2rem;
+form {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
+  border: 1px solid black;
+  border-radius: 7px;
+  /* justify-content: center; */
+  width: 30dvw;
+  height: auto;
   margin: 0 auto;
+  gap: 0.4rem;
+
+  button {
+    width: 60%;
+    align-self: center;
+  }
 }
 
-.card{
+.card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -76,16 +86,17 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
-  img{
+
+  img {
     width: 140px;
   }
 }
 
-.card:hover{
+.card:hover {
   border: 1px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -96,15 +107,16 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -114,10 +126,30 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+.dark {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+
+.dark>a {
   color: white;
+}
+
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+  background-color: white;
+  padding: 0.1rem;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Defines 3 rows: auto, flexible, auto */
+  height: 100vh;
+  /* Full viewport height */
 }
