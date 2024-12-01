@@ -24,7 +24,6 @@ const Card = ({ name, username, id }) => {
       const updatedFavorites = currentFavorites.filter(
         (fav) => fav.id !== newFavorite.id
       );
-      console.log(updatedFavorites);
       setFavorites(updatedFavorites);
     }
   };
