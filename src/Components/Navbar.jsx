@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ContextGlobal } from "../context/global.context";
 
 const Navbar = () => {
-  const { state, changeTheme} = useContext(ContextGlobal)
+  const { state, changeTheme } = useContext(ContextGlobal);
 
   useEffect(() => {
     if (state.theme === "dark") {
@@ -17,26 +17,29 @@ const Navbar = () => {
     }
   }, [state.theme]);
 
-  const handleThemeChange = () =>{
-    changeTheme()
-  }
-  
+  const handleThemeChange = () => {
+    changeTheme();
+  };
+
   return (
-    <nav className={state.theme === "light"? "light": "dark"}>
-      {/* <ul>
+    <nav className={state.theme === "light" ? "light" : "dark"}>
+      <img src="./images/DH.png" alt="dh logo" />
+      <div className="nav-links">
+        {/* <ul>
         <li> */}
-          <Link to="/">Home</Link>
+        <Link to="/">Home</Link>
         {/* </li>
         <li> */}
-          <Link to="/contact">Contact</Link>
+        <Link to="/contact">Contact</Link>
         {/* </li>
         <li> */}
-          <Link to="/favs">Favorites</Link>
+        <Link to="/favs">Favorites</Link>
         {/* </li>
       </ul> */}
 
-      {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={handleThemeChange}>Change theme</button>
+        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+        <button onClick={handleThemeChange}>Change theme</button>
+      </div>
     </nav>
   );
 };

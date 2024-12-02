@@ -4,8 +4,6 @@ const Form = () => {
   const [data, setData] = useState({ name: "", email: "" });
   const [error, setError] = useState({ name: "", email: "" });
   const [message, setMessage] = useState("");
-  //Aqui deberan implementar el form completo con sus validaciones
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const emailFormat = /^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/gm;

@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useReducer } from "react";
-import {
-  getFavoritesFromStorage,
-} from "../Components/utils/getFavorites";
+import { getFavoritesFromStorage } from "../Components/utils/getFavorites";
 import { reducer } from "./reducer";
 
 const initialState = {
@@ -14,8 +12,6 @@ const initialState = {
 export const ContextGlobal = createContext(initialState);
 
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const setFavorites = (favorites) =>

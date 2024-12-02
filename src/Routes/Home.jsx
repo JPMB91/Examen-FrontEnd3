@@ -7,12 +7,11 @@ import { ContextGlobal } from '../context/global.context';
 
 const Home = () => {
   const { state } = useContext(ContextGlobal);
-  console.log(state);
   return (
+    //state.theme === "light" ? "light": "dark"
     <main className="" >
       <h1>Home</h1>
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
         {state.dentists.map((dentist) => (
           <Card
             key={dentist.id}

@@ -1,17 +1,12 @@
 body {
-  /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 
 }
-
-  /* code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  } */
 
 .favButton {
   background-color: rgba(136, 136, 136, 0.116);
@@ -27,9 +22,28 @@ h1 {
 
 nav {
   display: flex;
-  width: auto;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+
+  img {
+    width: 200px;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    /* border: none; */
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  font-weight: 600;
 }
 
 a {
@@ -40,7 +54,7 @@ a {
 }
 
 a:hover {
-  color: rgb(136, 136, 136);
+  color: rgb(106, 104, 104);
 }
 
 footer {
@@ -49,15 +63,12 @@ footer {
   align-items: center;
   margin: 0 auto;
   padding: 1.2rem;
-  /* bottom: 0; */
   width: 90%;
-  height: 40px;
-  /* margin-top: 2rem; */
-}
+  height: auto;
 
-footer>img {
-  width: 200px;
-
+  img {
+    width: 200px;
+  }
 }
 
 form {
@@ -66,7 +77,6 @@ form {
   flex-direction: column;
   border: 1px solid black;
   border-radius: 7px;
-  /* justify-content: center; */
   width: 30dvw;
   height: auto;
   margin: 0 auto;
@@ -75,25 +85,8 @@ form {
   button {
     width: 60%;
     align-self: center;
+    border-radius: 8%;
   }
-}
-
-.card {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-
-  img {
-    width: 140px;
-  }
-}
-
-.card:hover {
-  border: 1px solid rgb(206, 217, 142);
 }
 
 .card-grid {
@@ -105,6 +98,31 @@ form {
   flex-wrap: wrap;
   margin: 0 auto;
 }
+
+.card {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  padding: 1rem;
+  border: 1px solid rgb(136, 136, 136);
+
+  img {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  button {
+    border-radius: 5px;
+    width: 50%;
+  }
+}
+
+.card:hover {
+  border: 1px solid rgb(206, 217, 142);
+}
+
 
 table {
   border-collapse: collapse;
@@ -149,7 +167,5 @@ tr:nth-child(even) {
 .App {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* Defines 3 rows: auto, flexible, auto */
   height: 100vh;
-  /* Full viewport height */
 }
