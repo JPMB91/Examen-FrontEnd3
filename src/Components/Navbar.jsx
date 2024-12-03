@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className={state.theme === "light" ? "light" : "dark"}>
-      <img src="./images/DH.png" alt="dh logo" />
+      <img src="/images/DH.png" alt="dh logo" />
       <div className="nav-links">
         {/* <ul>
         <li> */}

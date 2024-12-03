@@ -7,6 +7,7 @@ import Home from "./Routes/Home";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Detail from "./Routes/Detail";
+import { NotFound } from "./Routes/NotFound";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +19,7 @@ root.render(
           <Route path="/contact" element={<Contact />} />
           <Route path="/favs" element={<Favs />} />
           <Route path="/dentist/:id" element={<Detail />} />
+          <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
