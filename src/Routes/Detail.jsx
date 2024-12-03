@@ -23,17 +23,16 @@ const Detail = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <h1>{`Detail Dentist: ${id}`}</h1>
-      <div>
 
       <table>
         <thead>
           <tr>
-            <th>nombre:</th>
-            <th>email:</th>
-            <th>telefono</th>
-            <th>sitio web</th>
+            <th>Name:</th>
+            <th>Email:</th>
+            <th>Phone</th>
+            <th>Website</th>
           </tr>
         </thead>
         <tbody>
@@ -45,8 +44,7 @@ const Detail = () => {
           </tr>
         </tbody>
       </table>
-      </div>
-    </>
+    </div>
   );
 };
 

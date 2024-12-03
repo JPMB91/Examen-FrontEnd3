@@ -5,19 +5,9 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-}
-
-.favButton {
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
 }
 
 h1 {
@@ -32,16 +22,16 @@ nav {
   padding: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+}
 
-  img {
-    width: 200px;
-  }
+nav img {
+  width: 200px;
+}
 
-  button {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
+nav button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .nav-links {
@@ -70,10 +60,10 @@ footer {
   margin-top: 2rem;
   padding: 1.2rem;
   width: 100%;
+}
 
-  img {
-    width: 200px;
-  }
+footer img {
+  width: 200px;
 }
 
 form {
@@ -86,12 +76,27 @@ form {
   height: auto;
   margin: 0 auto;
   gap: 0.4rem;
+}
 
-  button {
-    width: 60%;
-    align-self: center;
-    border-radius: 8%;
-  }
+form button {
+  width: 60%;
+  align-self: center;
+  border-radius: 8%;
+}
+
+form input {
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .card-grid {
@@ -106,37 +111,36 @@ form {
 
 .card {
   display: flex;
-  border-radius: 15px;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 20%;
   min-width: 200px;
   max-width: 250px;
   height: 60dvh;
   padding: 1rem;
+  border-radius: 15px;
   border: 1px solid rgb(136, 136, 136);
-  justify-content: space-around;
+}
 
-  img {
-    width: 80%;
-    padding: 1rem;
-  }
+.card img {
+  width: 80%;
+  padding: 1rem;
+}
 
-  h3 {
-    text-align: center;
-  }
+.card h3 {
+  text-align: center;
+}
 
-  button {
-    border-radius: 5px;
-    width: 50%;
-    margin: 1rem;
-  }
+.card button {
+  border-radius: 5px;
+  width: 50%;
+  margin: 1rem;
 }
 
 .card:hover {
   border: 1px solid rgb(206, 217, 142);
 }
-
 
 table {
   border-collapse: collapse;
@@ -144,13 +148,10 @@ table {
   width: 80%;
   display: table;
   border: 1px solid #ccc;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-
-td,
-th {
+td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -165,10 +166,25 @@ tr:nth-child(even) {
   color: white;
 }
 
-.dark>a {
+.dark nav a {
   color: white;
 }
 
+.dark button {
+  background-color: white;
+}
+
+.dark th {
+  color: black;
+}
+
+.dark .card {
+  border: 1.2px solid rgb(176, 174, 170);
+}
+
+.dark > a {
+  color: white;
+}
 
 .error {
   color: red;
@@ -186,8 +202,25 @@ tr:nth-child(even) {
   height: 100dvh;
 }
 
-.contact{
+.contact {
   padding: 2rem;
   text-align: center;
-  
+}
+
+.contact button {
+  padding: 0.5rem;
+  border-radius: 15px;
+  margin: 0.4rem;
+}
+
+.contact p {
+  margin: 1rem;
+}
+
+.favButton {
+  background-color: rgba(199, 103, 103, 0.116);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
 }
