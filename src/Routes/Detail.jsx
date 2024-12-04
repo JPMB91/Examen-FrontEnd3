@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { ContextGlobal } from "../context/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
   const [data, setData] = useState({});
   const { id } = useParams();
-  // console.log(id);
-
+  const {state} = useContext(ContextGlobal)
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
   useEffect(() => {
+
     const getDetail = async () => {
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/users/${id}`
@@ -23,7 +24,7 @@ const Detail = () => {
   }, []);
 
   return (
-    <div>
+    <div className={state.theme ==="light"? "light": "dark"}>
       <h1>{`Detail Dentist: ${id}`}</h1>
 
       <table>

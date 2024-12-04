@@ -6,10 +6,8 @@ import { ContextGlobal } from "../context/global.context";
 
 const Home = () => {
   const { state } = useContext(ContextGlobal);
-  console.log(state);
-  //TODO classname in HOME
   return (
-    <main className="">
+    <div className={state.theme === "light"? "light": "dark"}>
       <h1>Home</h1>
       {state.dentists.length === 0 ? (
         <h1>LOADING...</h1> 
@@ -25,7 +23,7 @@ const Home = () => {
           ))}
         </div>
       )}
-    </main>
+    </div>
   );
 };
 

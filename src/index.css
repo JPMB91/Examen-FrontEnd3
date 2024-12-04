@@ -8,6 +8,8 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+
 }
 
 h1 {
@@ -21,7 +23,6 @@ nav {
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
 }
 
 nav img {
@@ -57,7 +58,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   padding: 1.2rem;
   width: 100%;
 }
@@ -107,6 +107,7 @@ form input:focus {
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -121,6 +122,7 @@ form input:focus {
   padding: 1rem;
   border-radius: 15px;
   border: 1px solid rgb(136, 136, 136);
+
 }
 
 .card img {
@@ -130,6 +132,13 @@ form input:focus {
 
 .card h3 {
   text-align: center;
+}
+
+.card a:hover{
+  color: #a39898;
+}
+.dark .card a {
+  color: rgb(14, 14, 14);
 }
 
 .card button {
@@ -151,7 +160,8 @@ table {
   margin: 0 auto;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -166,24 +176,34 @@ tr:nth-child(even) {
   color: white;
 }
 
-.dark nav a {
+.dark nav {
   color: white;
 }
 
+nav.dark,
+footer.dark {
+  background-color: #3f3d3d
+}
+
+
+.dark a {
+  color: white;
+}
+
+.dark .card a:hover{
+  color: rgb(202, 218, 228)
+}
 .dark button {
   background-color: white;
+  color: black;
 }
 
 .dark th {
-  color: black;
+  color: rgb(23, 22, 24);
 }
 
 .dark .card {
   border: 1.2px solid rgb(176, 174, 170);
-}
-
-.dark > a {
-  color: white;
 }
 
 .error {

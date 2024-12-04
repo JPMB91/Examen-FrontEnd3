@@ -6,9 +6,10 @@ import { ContextGlobal } from "../context/global.context";
 
 const Favs = () => {
   const { state } = useContext(ContextGlobal);
+  console.log("favorites"+state.favorites);
 
   return (
-    <>
+    <div className={state.theme === "light" ? "light": "dark"}>
       <h1>Favorite Dentists</h1>
       <div className="card-grid">
         {state.favorites.map((fav) => {
@@ -22,7 +23,7 @@ const Favs = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

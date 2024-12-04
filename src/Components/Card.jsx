@@ -8,7 +8,6 @@ import {
 
 const Card = ({ name, username, id }) => {
   const { state, setFavorites } = useContext(ContextGlobal);
-
   const addFav = () => {
     const newFavorite = { id, name, username };
 
@@ -16,7 +15,7 @@ const Card = ({ name, username, id }) => {
     const favoriteExists = currentFavorites.some(
       (fav) => fav.id === newFavorite.id
     );
-
+    // solo lo agrega si no existe ya en favoritos
     if (!favoriteExists) {
       setFavorites([...state.favorites, newFavorite]);
     } else {
