@@ -18,6 +18,7 @@ const Card = ({ name, username, id }) => {
     // solo lo agrega si no existe ya en favoritos
     if (!favoriteExists) {
       setFavorites([...state.favorites, newFavorite]);
+      // alert(`Dentist added to favorites`)
     } else {
       //Si se vuelve a presionar el boton quita la card de favoritos
       const updatedFavorites = currentFavorites.filter(
@@ -27,7 +28,6 @@ const Card = ({ name, username, id }) => {
     }
   };
 
-  //TODO classname para link: className={state.theme === "light" ? "light" : "dark"}
   return (
     <div className="card">
       <img src="../images/doctor.jpg" alt="doctor" />
@@ -37,7 +37,9 @@ const Card = ({ name, username, id }) => {
       </Link>
       <h3>{username}</h3>
       <button onClick={addFav} className="favButton">
-        Add fav
+        {/* Add fav */}
+        ⭐
+        {/* 🌟 */}
       </button>
     </div>
   );
