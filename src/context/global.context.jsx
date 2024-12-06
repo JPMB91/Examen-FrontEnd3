@@ -21,9 +21,6 @@ export const ContextProvider = ({ children }) => {
   const setDentists = (dentists) =>
     dispatch({ type: "SET_DENTISTS", payload: dentists });
 
-  
-
-
   useEffect(() => {
     const url = "https://jsonplaceholder.typicode.com/users";
     const getDentists = async () => {

@@ -7,14 +7,15 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const emailFormat = /^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/gm;
-
     const errorsFound = { name: "", email: "" };
 
     if (!emailFormat.test(data.email)) {
       errorsFound.email = "Use a valid email format";
+      setMessage("");
     }
-    if (data.name.length < 5) {
+    if (data.name.trim().length < 5) {
       errorsFound.name = "Name must be al least 5 characters long";
+      setMessage("");
     } else {
       setError({ name: "", email: "" });
       setData({ name: "", email: "" });
@@ -47,8 +48,6 @@ const Form = () => {
           onChange={handleChange}
         />
         {error.email && <h5 className="error">{error.email}</h5>}
-        {/* <label htmlFor="message">Message</label>
-        <textarea name="message" id="message"></textarea> */}
         <button onClick={handleSubmit}>Send</button>
         {message && <h5 className="success">{message}</h5>}
       </form>

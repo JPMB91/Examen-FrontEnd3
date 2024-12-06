@@ -37,9 +37,8 @@ const Card = ({ name, username, id }) => {
       </Link>
       <h3>{username}</h3>
       <button onClick={addFav} className="favButton">
-        {/* Add fav */}
+
         ⭐
-        {/* 🌟 */}
       </button>
     </div>
   );
