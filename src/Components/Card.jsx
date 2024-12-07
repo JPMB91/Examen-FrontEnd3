@@ -18,7 +18,6 @@ const Card = ({ name, username, id }) => {
     // solo lo agrega si no existe ya en favoritos
     if (!favoriteExists) {
       setFavorites([...state.favorites, newFavorite]);
-      // alert(`Dentist added to favorites`)
     } else {
       //Si se vuelve a presionar el boton quita la card de favoritos
       const updatedFavorites = currentFavorites.filter(
