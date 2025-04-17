@@ -4,6 +4,8 @@ import { ContextGlobal } from "../context/global.context";
 
 const Home = () => {
   const { state } = useContext(ContextGlobal);
+
+  console.log(state);
   return (
     <div className={state.theme === "light" ? "light" : "dark"}>
       <h1>Home</h1>
@@ -17,6 +19,7 @@ const Home = () => {
               name={dentist.name}
               username={dentist.username}
               id={dentist.id}
+              isFavorite={state.dentist}
             />
           ))}
         </div>
